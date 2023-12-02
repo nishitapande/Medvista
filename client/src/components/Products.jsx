@@ -20,7 +20,10 @@ const Wrapper = styled.div`
     justify-content: space-between;
     margin-top: 2rem;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 1rem;
+  
+    ${'' /* // margin: 0 2rem;
+    // border:1px solid red; */}
 `
 const Products = () => {
     return (
