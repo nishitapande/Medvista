@@ -14,13 +14,13 @@ const Conatiner = styled.div`
     ${'' /* margin: 2rem 1rem;
     padding:2rem; */}
     border-radius:1.5rem;
-    
+    transition: all 0.3s ease-in;
 
     &:hover{
         border: 0.1px solid lightgray;
         transform: scale(1.05);
         // border-radius: 1.5rem;
-        transition: all 0.3s ease-in-out;
+
     }
 `
 const ImageContainer = styled.div`
