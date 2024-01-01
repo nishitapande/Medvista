@@ -59,9 +59,25 @@ const ListItem = styled.li`
 `
 const ShoppingContainer = styled.div`
     flex: 1;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    height: fit-content;
 `
-const Shopping = styled.div``
-const Announcement = styled.h2``
+const Shopping = styled.div`
+ background-color: #b3d9d9;
+ margin-top: 0;
+ height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+
+`
+const Announcement = styled.h2`
+    margin-top: 10px;
+    margin-left: 1rem;
+
+`
 
 const Labal = styled.label`
     font-size: 3rem;
@@ -84,6 +100,13 @@ const PriceOptions = styled.div`
     margin-bottom: 1rem;
     align-items: center;
     justify-content: center;
+`
+const AddingToCart = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    margin: 1rem;
+    gap: 1rem;
 `
 const Select = styled.select``
 const Option = styled.option``
@@ -126,18 +149,30 @@ const ProductDetailPage = () => {
                             </Shopping>
                             <PriceOption>
                                 <PriceOptions>
-                                    <Input type="radio"></Input>
-                                    <Labal>Rs 250</Labal>
+                                    <Input type="radio" value='1' name='choice'></Input>
+                                    <Labal >Rs 250</Labal>
                                 </PriceOptions>
                                 <PriceOptions>
-                                    <Input type="radio"></Input>
+                                    <Input type="radio" value='1' name='choice'></Input>
                                     <Labal>Rs 250 + Free Shipping
                                     </Labal>
                                 </PriceOptions>
-
                             </PriceOption>
+                            <Announcement>Including All Taxes</Announcement>
+                            <AddingToCart>
+                                <Select style={{ width: "70px" }}>
+                                    <Option value='1'>1 Jar</Option>
+                                    <Option value='2'>2 Jar </Option>
+                                    <Option value='3'>3 Jar </Option>
+                                </Select>
+                                <p style={{ fontSize: "14px" }}>OF 400 GM PASTE</p>
+                            </AddingToCart>
+                            <button style={{ width: "100%", backgroundColor: "red", height:"30px", color:"white", border:"none", cursor:"pointer", marginBottom:"1rem" }}>
+                                Add To Cart
+                            </button>
                         </ShoppingContainer>
                     </TopContainer>
+
                     <BottomContainer>
                         Bottom
                     </BottomContainer>
@@ -148,5 +183,8 @@ const ProductDetailPage = () => {
         </>
     )
 }
-
 export default ProductDetailPage
+
+
+
+
